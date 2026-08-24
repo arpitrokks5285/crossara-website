@@ -1,85 +1,96 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index,follow">
-  <meta name="description" content="Privacy Policy for the Crossara Android application.">
-  <meta name="theme-color" content="#0A0A0A">
-  <link rel="canonical" href="https://crossara.app/privacy.html">
-  <link rel="icon" href="assets/crossara-favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css">
-  <title>Privacy Policy — Crossara</title>
-</head>
-<body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Privacy Policy for the Crossara Android application."><meta name="theme-color" content="#0A0A0A"><link rel="canonical" href="https://crossara.app/privacy.html"><link rel="icon" href="assets/crossara-favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css"><style>@media(max-width:480px){.legal-hero h1{font-size:40px}}</style><title>Privacy Policy — Crossara</title></head><body>
 <header class="site-header"><a class="brand" href="index.html"><img src="assets/crossara-navbar-wordmark.svg" alt="Crossara" width="188" height="28"></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></header>
-<main class="legal-shell">
-  <a class="back-link" href="index.html">← Back to Crossara</a>
-  <header class="legal-hero"><div class="eyebrow">Crossara legal</div><h1>Privacy Policy</h1><p class="legal-meta"><strong>Effective date:</strong> 23 August 2026<br><strong>Contact:</strong> <a href="mailto:support.crossara@gmail.com">support.crossara@gmail.com</a></p></header>
-  <div class="legal-content">
-
-  <p>This Privacy Policy explains how the Crossara Android application ("Crossara", "we", "our", or "the app") accesses, processes, stores, and, where applicable, shares information. Crossara is a visual crosshair overlay utility for Android.</p>
-
-  <h2>1. Current data practices</h2>
-  <p>In the current pre-launch build, Crossara does <strong>not</strong> operate its own backend, does not contain analytics or crash-reporting SDKs, does not contain the Google Mobile Ads SDK or Google User Messaging Platform (UMP), and does not transmit personal information to a Crossara server.</p>
-  <p>Crossara currently processes and stores certain app settings locally on the device, including crosshair configuration, overlay state, tutorial/review eligibility state, entitlement-preparation state, and the URI of a user-selected Custom PNG where that feature is used.</p>
-
-  <h2>2. Custom PNG images</h2>
-  <p>If you choose a Custom PNG, Crossara uses Android's system document picker to let you select a specific image. The selected image is decoded and processed locally for rendering. Crossara does not upload the image to a Crossara server and does not receive broad access to your photo library. The app may retain permission to access the selected document URI so the chosen image can continue to be used later.</p>
-
-  <h2>3. Overlay and foreground service</h2>
-  <p>Crossara uses Android's overlay capability to draw a visual crosshair over other apps. The overlay is designed as a visual-only layer and does not read screen contents, capture screenshots, record gameplay, collect game account information, use Accessibility Service, or receive game touch input. A foreground service and ongoing notification may be used to keep the overlay active and provide a visible way to stop it.</p>
-
-  <h2>4. Permissions</h2>
-  <p>Crossara may request or declare permissions required for its core functionality, including:</p>
-  <ul>
-    <li><strong>Display over other apps</strong> — to render the crosshair overlay.</li>
-    <li><strong>Foreground service</strong> — to keep an active overlay reliable while the app is not in the foreground.</li>
-    <li><strong>Notifications</strong> — to show foreground-service status and controls where required or permitted by Android.</li>
-  </ul>
-  <p>Crossara does not currently request microphone, camera, location, contacts, SMS, call-log, Accessibility Service, or broad photo-library access for its core crosshair functionality.</p>
-
-  <h2>5. Local storage and retention</h2>
-  <p>Crossara uses local app storage, including SharedPreferences, for settings and state such as crosshair scale, opacity, rotation, color, position, selected styles, Custom PNG URI, tutorial status, review eligibility counters, and entitlement-related cache/preparation values. These values remain on the device until changed, cleared, or removed with the app, subject to Android backup/restore behavior where applicable.</p>
-
-  <h2>6. Google Play services</h2>
-  <p>Crossara includes Google Play's in-app review functionality. When a review flow is requested, Google Play services may process information necessary to determine eligibility and display the review experience. Google's handling of information is governed by Google's own terms and privacy policies.</p>
-
-  <h2>7. Advertising and consent — when enabled</h2>
-  <div class="notice"><p><strong>Important:</strong> Advertising is planned for Crossara but is not active in the current pre-launch build described by the privacy audit dated 23 August 2026.</p></div>
-  <p>When advertising is enabled in a future Crossara build, we plan to use Google AdMob. AdMob and its advertising partners may process information such as device or advertising identifiers, IP address/network information, app interaction information, consent choices, and other data necessary to provide, measure, secure, and personalize or limit advertising, subject to applicable law and user choices.</p>
-  <p>For regions where consent or privacy choices are required, Crossara plans to use Google's User Messaging Platform (UMP) and AdMob Privacy &amp; messaging. Crossara is designed to request updated consent information and present any required privacy message before requesting ads where applicable. Users may also be given access to privacy options where required.</p>
-  <p>Google's advertising technologies and data practices are governed by Google's applicable policies and disclosures.</p>
-
-  <h2>8. Purchases — when enabled</h2>
-  <p>Crossara plans to offer a non-consumable PRO purchase through Google Play Billing. When billing is enabled, Google Play will process purchase and payment information under Google's own terms. Crossara does not receive your full payment-card details. The app may process purchase status and a purchase token needed to reconcile or verify entitlement.</p>
-  <p>Crossara's planned security architecture may send a purchase token to a secure backend for verification against Google Play Developer services. If and when that backend becomes active, this policy will be updated to describe the implemented data flow, retention, security measures, and any additional processors before or alongside launch of that functionality.</p>
-
-  <h2>9. Play Integrity — if enabled</h2>
-  <p>Crossara may in the future use Google Play Integrity as a fraud-prevention and app-integrity signal for sensitive entitlement actions. Play Integrity is not active in the current audited build. If enabled, relevant integrity signals would be processed in accordance with Google's terms and this policy would be updated as needed.</p>
-
-  <h2>10. Data sharing</h2>
-  <p>Crossara does not currently sell personal information. In the current audited build, Crossara does not share user data with advertisers, analytics providers, or a Crossara backend. When Google AdMob, UMP, Billing, or backend verification are enabled, information may be processed by Google or relevant infrastructure providers as described in the sections above and in their respective policies.</p>
-
-  <h2>11. Security</h2>
-  <p>We aim to minimize data collection and keep app-only settings on the device where practical. No method of software or data storage can guarantee absolute security. Crossara's planned purchase architecture is designed so local entitlement cache is not treated as independent proof of payment.</p>
-
-  <h2>12. Children</h2>
-  <p>Crossara does not currently provide account registration, age profiling, or child-directed social features. If our audience, monetization configuration, or legal obligations change, we will update the app and this policy as required.</p>
-
-  <h2>13. International users and privacy choices</h2>
-  <p>Crossara may be distributed internationally. Privacy requirements vary by jurisdiction. Where supported and applicable, Crossara intends to use region-aware Google consent and privacy messaging rather than hardcoded country rules. Users in relevant regions may be presented with consent, objection, opt-out, or privacy-management choices as required by the applicable configuration and law.</p>
-
-  <h2>14. Your choices and deletion</h2>
-  <p>You can change Crossara settings within the app and can remove locally stored app data using Android's app-storage controls or by uninstalling the app, subject to Android backup/restore behavior. If future versions add accounts, server-side data, or other user-data features, we will provide any deletion mechanisms required by applicable law and Google Play policy.</p>
-
-  <h2>15. Changes to this policy</h2>
-  <p>We may update this Privacy Policy when Crossara's functionality, SDKs, data practices, legal requirements, or third-party services change. The effective date at the top of this page will be updated when material changes are published.</p>
-
-  <h2>16. Contact</h2>
-  <p>For privacy questions or requests relating to Crossara, contact <a href="mailto:support.crossara@gmail.com">support.crossara@gmail.com</a>.</p>
-  </div>
-</main>
-<footer class="site-footer"><img src="assets/crossara-navbar-wordmark.svg" alt="Crossara" width="154" height="23"><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div><p>© 2026 Crossara.</p></footer>
-</body>
-</html>
+<main class="legal-shell"><a class="back-link" href="index.html">← Back to Crossara</a><header class="legal-hero"><div class="eyebrow">Crossara legal</div><h1>Privacy Policy</h1><p class="legal-meta"><strong>Last updated:</strong> 24 August 2026<br><strong>Contact:</strong> <a href="mailto:crossarasupport@gmail.com">crossarasupport@gmail.com</a></p></header><div class="legal-content">
+    <p><strong>Last Updated: August 24, 2026</strong></p>
+    <p>CROSSARA LABS built Crossara as an Android visual crosshair overlay application. This Privacy Policy explains what information is handled when you use Crossara, what stays on your device, when Google services may process information, and the choices available to you.</p>
+    <p>Our approach is to keep Crossara&#39;s core functionality local to your device wherever practical. CROSSARA LABS does not currently operate a Crossara account system, proprietary user database, analytics backend, or cloud storage service for user content.</p>
+    <p>If you have questions about this policy, you can contact us at <strong><a href="mailto:crossarasupport@gmail.com">crossarasupport@gmail.com</a></strong>.</p>
+    <h2>1. Information Stored on Your Device</h2>
+    <p>Crossara stores information locally when necessary to remember your settings and provide app functionality.</p>
+    <p>This can include your selected crosshair, size, opacity, color, rotation and position; recently used crosshairs; tutorial state; purchase-entitlement state; rewarded-access expiration times; advertising-related app state; and a reference to a custom image you select.</p>
+    <p>This locally stored information is used to operate Crossara. CROSSARA LABS does not upload these settings to its own server.</p>
+    <p>Crossara&#39;s current configuration also excludes its SharedPreferences from Crossara-configured cloud backup and device-to-device transfer.</p>
+    <h2>2. Custom PNG Images</h2>
+    <p>Eligible users can select their own PNG image for use as a custom crosshair.</p>
+    <p>Image selection takes place through Android&#39;s system file picker. Crossara stores a reference to the selected file and may retain Android&#39;s permission to access that file so that the image remains available for use.</p>
+    <p>The selected image is decoded and rendered locally on your device. Crossara does not copy or upload the selected image to a CROSSARA LABS server.</p>
+    <p>Selecting one image does not give Crossara unrestricted access to unrelated files on your device.</p>
+    <h2>3. Overlay and Foreground Service</h2>
+    <p>Crossara requires Android&#39;s <strong>Display over other apps</strong> access to provide its core crosshair-overlay functionality.</p>
+    <p>The overlay is a non-interactive visual layer. Crossara does not use the overlay to read another application&#39;s screen contents, capture screenshots, record your screen, read another application&#39;s memory, inject input, or automate gameplay.</p>
+    <p>When you activate the crosshair, Crossara uses an Android foreground service to keep the user-requested overlay active. Android may display a persistent notification while this service is running, and the overlay can be stopped by the user.</p>
+    <h2>4. Advertising</h2>
+    <p>The free version of Crossara uses <strong>Google Mobile Ads (AdMob)</strong>.</p>
+    <p>Crossara currently uses advertising formats including banner advertisements and rewarded advertisements. Rewarded advertisements can be voluntarily completed to receive temporary access to eligible Crossara content.</p>
+    <p>Google&#39;s advertising technology may process information such as your IP address, which can be used to estimate general location; interactions with the app and advertisements; diagnostic and performance information; and device or advertising identifiers. Google documents these categories as part of the Google Mobile Ads SDK&#39;s operation.</p>
+    <p>This processing occurs through Google&#39;s advertising services. CROSSARA LABS does not operate its own advertising-profile database and does not receive every category of information that Google may process through its services.</p>
+    <p>Under Crossara&#39;s current entitlement model, PLUS and ULTIMATE users bypass Crossara&#39;s normal advertising.</p>
+    <h2>5. Advertising Consent and Privacy Choices</h2>
+    <p>Crossara uses the <strong>Google User Messaging Platform (UMP)</strong> to manage applicable advertising consent and privacy choices.</p>
+    <p>Depending on your location, Google&#39;s requirements and applicable privacy rules, you may be presented with options concerning advertising and related data processing.</p>
+    <p>Where available, applicable choices can be reviewed again through:</p>
+    <p><strong>Crossara → Settings → Privacy Choices</strong></p>
+    <p>The options shown may differ between countries or regions. Crossara does not promise that the same consent interface or choices will be available to every user worldwide.</p>
+    <h2>6. Google Play Purchases</h2>
+    <p>Crossara offers optional one-time purchases through <strong>Google Play Billing</strong>, including Crossara PLUS and Crossara ULTIMATE.</p>
+    <p>Google Play processes the financial transaction. CROSSARA LABS does <strong>not</strong> receive or store your complete credit-card number, debit-card number, bank-account credentials, CVV, PIN, or similar payment authentication information.</p>
+    <p>Crossara receives purchase-related information needed to determine and restore the entitlement associated with a valid purchase. An entitlement state may also be stored locally on your device so the app can provide the features associated with your purchase.</p>
+    <p>Google&#39;s handling of payment and transaction information is governed by Google&#39;s applicable policies and terms.</p>
+    <h2>7. Google and Other Third-Party Services</h2>
+    <p>Crossara currently integrates Google services used for specific app functions, including:</p>
+    <ul>
+      <li>Google Mobile Ads (AdMob) for advertising</li>
+      <li>Google User Messaging Platform for advertising consent and privacy choices</li>
+      <li>Google Play Billing for purchases; and</li>
+      <li>Google Play functionality used for app rating/review experiences.</li>
+    </ul>
+    <p>These services may process information under Google&#39;s own privacy policies and service terms.</p>
+    <p>The fact that a Google service processes information does not necessarily mean CROSSARA LABS receives or stores that information itself.</p>
+    <p>Google Play requires developers to account for data handled through third-party SDKs when maintaining their privacy and Data Safety disclosures.</p>
+    <h2>8. Analytics and Crash Reporting</h2>
+    <p>Crossara does not currently integrate Firebase Analytics, Google Analytics for Firebase, Firebase Crashlytics, or a proprietary CROSSARA LABS analytics or crash-reporting platform.</p>
+    <p>Google services integrated for advertising, billing, consent or Play functionality may nevertheless process diagnostic, interaction or service-related information as part of providing those services.</p>
+    <p>If Crossara later introduces separate analytics, crash reporting, or similar data-processing technology, we will review and update this Privacy Policy and applicable Google Play disclosures as necessary.</p>
+    <h2>9. Accounts and Personal Information</h2>
+    <p>You do not currently need a CROSSARA LABS account to use Crossara.</p>
+    <p>Crossara does not currently ask you to create a username or password or provide your name, phone number or email address as part of a Crossara account.</p>
+    <p>Use of Google Play and information associated with your Google account are governed by Google&#39;s systems and policies. Crossara does not create a separate Crossara profile from your Google Play account.</p>
+    <h2>10. Feedback and Support</h2>
+    <p>If you choose <strong>Send Feedback</strong>, Crossara may open an email application with useful context such as the Crossara app version.</p>
+    <p>You decide whether to send the message and what information to include.</p>
+    <p>If you contact CROSSARA LABS, we will receive the information you voluntarily send, which can include your email address, the contents of your message and any attachments you choose to provide.</p>
+    <p>Support correspondence may be retained for as long as reasonably necessary to respond to you, maintain appropriate business records, investigate abuse or technical issues, resolve disputes, or meet applicable legal obligations.</p>
+    <p>Please do not send passwords, complete payment-card information or other sensitive information that is unnecessary for us to assist you.</p>
+    <h2>11. Children and Teen Users</h2>
+    <p>Crossara is intended for users <strong>aged 13 and older</strong>. Crossara&#39;s current Google Play target audience does not include children under 13.</p>
+    <p>Crossara does not operate a proprietary account system through which CROSSARA LABS knowingly requests names, email addresses, phone numbers or similar account information from children.</p>
+    <p>Users under the age of legal majority in their country should use Crossara with the involvement or permission of a parent or legal guardian where required by applicable law.</p>
+    <p>Advertising, consent and Google Play services may be subject to additional age- and region-related requirements administered through Google and applicable platform settings.</p>
+    <h2>12. Data Retention and Removal</h2>
+    <p>Crossara&#39;s settings and related local state generally remain on your device until they are reset, replaced, expire where applicable, the application&#39;s data is cleared, or Crossara is uninstalled.</p>
+    <p><strong>Reset Crosshair Settings</strong> resets applicable Crossara preferences. It is not intended to delete purchase records maintained by Google Play.</p>
+    <p>Uninstalling Crossara normally removes Crossara-owned local application data according to Android&#39;s application-data behavior.</p>
+    <p>Crossara currently has no CROSSARA LABS cloud account or proprietary online user database, so there is no separate Crossara cloud account to request deletion of.</p>
+    <p>Information independently maintained by Google, your email provider or another third-party service is subject to that provider&#39;s own retention and deletion practices.</p>
+    <h2>13. Security</h2>
+    <p>Crossara is designed to minimize the amount of information handled directly by CROSSARA LABS and to keep core app settings on the user&#39;s device.</p>
+    <p>Google documents data collected by its Mobile Ads SDK as encrypted in transit using TLS. Other Google services use their own security practices and infrastructure.</p>
+    <p>No electronic storage or transmission system can be guaranteed to be completely secure, and CROSSARA LABS does not make an absolute guarantee of security.</p>
+    <h2>14. International Users and Privacy Rights</h2>
+    <p>Crossara is intended for distribution in multiple countries.</p>
+    <p>Privacy, advertising and consumer requirements differ between jurisdictions. Depending on your location, Google UMP and other platform mechanisms may provide region-specific privacy choices.</p>
+    <p>Where applicable law gives you rights relating to information directly controlled by CROSSARA LABS, you may contact us at <strong><a href="mailto:crossarasupport@gmail.com">crossarasupport@gmail.com</a></strong>.</p>
+    <p>For information controlled independently by Google or another service provider, the relevant provider&#39;s privacy controls or request mechanisms may apply.</p>
+    <p>Nothing in this Privacy Policy is intended to limit rights that cannot legally be limited under applicable law.</p>
+    <h2>15. Changes to Crossara&#39;s Data Practices</h2>
+    <p>Crossara may evolve over time.</p>
+    <p>If we introduce functionality that materially changes how information is handled—for example, a Crossara account system, proprietary backend or cloud storage, additional analytics, a new advertising provider, or new permissions involving personal information—we will review this Privacy Policy and update applicable disclosures and consent mechanisms as required.</p>
+    <p>We do not describe hypothetical future data collection as though it occurs today.</p>
+    <h2>16. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy when Crossara&#39;s features, data practices, third-party services, legal obligations or platform requirements change.</p>
+    <p>The <strong>Last Updated</strong> date at the top of this page will identify the latest revision.</p>
+    <p>Where appropriate, material changes will also be reflected through relevant in-app disclosures, consent mechanisms or Google Play declarations.</p>
+    <h2>17. Contact</h2>
+    <p>For privacy questions or concerns relating to Crossara:</p>
+    <p><strong>CROSSARA LABS</strong><br><strong>Crossara</strong><br><strong>Website:</strong> <a href="https://crossara.app/">crossara.app</a><br><strong>Email:</strong> <a href="mailto:crossarasupport@gmail.com">crossarasupport@gmail.com</a><br><strong>Country:</strong> India</p>
+</div></main><footer class="site-footer"><img src="assets/crossara-navbar-wordmark.svg" alt="Crossara" width="154" height="23"><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div><p>© 2026 Crossara.</p></footer></body></html>
