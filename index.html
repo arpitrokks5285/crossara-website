@@ -1,22 +1,83 @@
 <!doctype html>
-<html lang="en"><head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Crossara is a precision crosshair overlay for Android, built for fast setup, focused control, and on-device customization."><meta name="theme-color" content="#0A0A0A">
-  <meta property="og:title" content="Crossara — Precision. Focus. Control."><meta property="og:description" content="A precision crosshair overlay for Android."><meta property="og:type" content="website"><meta property="og:url" content="https://crossara.app/"><meta property="og:image" content="https://crossara.app/assets/crossara-og-1200x630.png">
-  <link rel="canonical" href="https://crossara.app/"><link rel="icon" href="assets/crossara-favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/crossara-favicon-180.png"><link rel="stylesheet" href="assets/site.css">
-  <title>Crossara — Precision Crosshair Overlay for Android</title>
-</head><body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><a class="brand" href="index.html" aria-label="Crossara home"><img src="assets/crossara-navbar-wordmark.svg" alt="Crossara" width="188" height="28"></a><nav aria-label="Main navigation"><a href="#features">Features</a><a href="#privacy">Privacy</a><a href="support.html">Support</a></nav></header>
-  <main id="main">
-    <section class="hero"><div class="hero-copy"><p class="eyebrow">Precision overlay for Android</p><h1>Own the center.</h1><p class="lead">A focused crosshair utility built for quick setup, clear control, and a visual aiming reference that stays out of your way.</p><div class="actions"><a class="button primary" href="#features">Explore Crossara</a><a class="button secondary" href="support.html">Get support</a></div><p class="availability"><span aria-hidden="true"></span> Pre-launch development</p></div><div class="hero-visual" aria-hidden="true"><div class="reticle"><span></span><span></span><i></i></div><img src="assets/crossara-a-mark.svg" alt="" width="230" height="230"><div class="coordinate c1">X 00.00</div><div class="coordinate c2">Y 00.00</div></div></section>
-    <section class="signal-strip" aria-label="Product principles"><span>Visual-only overlay</span><span>On-device settings</span><span>No account required</span><span>No website tracking</span></section>
-    <section class="section" id="features"><div class="section-intro"><p class="eyebrow">Built with intent</p><h2>Control without clutter.</h2><p>Crossara keeps the essential tools close and the experience deliberate.</p></div><div class="feature-grid">
-      <article><span class="number">01</span><h3>Precision controls</h3><p>Adjust scale, opacity, color, rotation, and position to shape your aiming reference.</p></article><article><span class="number">02</span><h3>Curated styles</h3><p>Choose from distinct crosshair families designed for clear recognition and practical use.</p></article><article><span class="number">03</span><h3>Custom PNG</h3><p>Select a specific image through Android's document picker and render it locally on your device.</p></article><article><span class="number">04</span><h3>Visible control</h3><p>An ongoing system notification can keep overlay status clear and provide a direct way to stop it.</p></article>
-    </div></section>
-    <section class="precision-panel"><div><p class="eyebrow">Designed for focus</p><h2>One visual layer.<br>Nothing more.</h2></div><p>Crossara is designed to draw a visual crosshair over other apps. It does not read screen contents, capture screenshots, record gameplay, use Accessibility Service, or receive game touch input.</p></section>
-    <section class="section privacy-section" id="privacy"><div class="section-intro"><p class="eyebrow">Privacy by restraint</p><h2>Your setup stays yours.</h2></div><div class="privacy-card"><div class="privacy-mark" aria-hidden="true">◎</div><div><h3>Current pre-launch build</h3><p>Crossara has no own backend, analytics or crash-reporting SDK, Google Mobile Ads SDK, or Google UMP. App settings and selected Custom PNG access are handled on-device as described in the policy.</p><a class="text-link" href="privacy.html">Read the Privacy Policy <span aria-hidden="true">→</span></a></div></div></section>
-    <section class="cta"><img src="assets/crossara-tagline.svg" alt="Precision. Focus. Control." width="620" height="90"><p>Crossara is currently in pre-launch development. Official release availability will be published here.</p></section>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Crossara is a customizable Android crosshair overlay with BASIC, PRO and PRECISION styles, RGB Glow and Custom PNG support.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://crossara.app/">
+  <link rel="icon" href="assets/crossara-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/crossara-favicon-180.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <title>Crossara — Custom Crosshair Overlay for Android</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Crossara home"><img src="assets/crossara-navbar-wordmark.svg" alt="Crossara"></a>
+    <nav aria-label="Main navigation">
+      <a href="#controls">Controls</a><a href="#styles">Styles</a><a href="#rgb">RGB Glow</a><a href="#pro">Custom PNG</a><a href="support.html">Support</a>
+    </nav>
+    <a class="store-pill" href="#launch"><span class="play-mark" aria-hidden="true"></span><span><small>Coming soon on</small>Google Play</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Android crosshair overlay</p>
+        <h1>Your <span>crosshair.</span><br>Your <span>control.</span></h1>
+        <p class="lead">A focused Android overlay built around real control — choose a reticle, pick a color, tune the details and launch.</p>
+        <div class="actions"><a class="button primary" href="#controls">Explore the product</a><a class="button secondary" href="#launch">Coming soon on Google Play</a></div>
+        <div class="hero-metrics"><div><b>BASIC</b><span>Clean essentials</span></div><div><b>PRO</b><span>Advanced + Custom PNG</span></div><div><b>PRECISION</b><span>Signature designs</span></div></div>
+      </div>
+
+      <div class="hero-stage" aria-label="Crossara product preview">
+        <div class="glow-orbit"></div>
+        <article class="product-card deck-card">
+          <img src="https://media.canva.com/v2/image-resize/format:PNG/height:48/quality:100/uri:ifs%3A%2F%2FM%2F1304776f-cdff-4006-abff-2d323bb76fe4/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAFmo4qnI0DC3ZCrJE0tQAGeG1cqDASQfPCy5JuGwFB29&exp=1787609114&osig=AAAAAAAAAAAAAAAAAAAAALxZ_MAK82IvnEMJ6NwzQ-frWr6QCzj0AOSnDQAQGna2&signer=media-rpc&x-canva-quality=thumbnail" alt="Crossara Control Deck header">
+          <img src="https://media.canva.com/v2/image-resize/format:PNG/height:81/quality:100/uri:ifs%3A%2F%2FM%2F54b12c48-e6d9-4d58-8165-17789a171ef1/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAANkv2z8cJMLnFIXDGTy0sW6iNtOVe3EwecEeblfK6IvG&exp=1787609606&osig=AAAAAAAAAAAAAAAAAAAAADFggHBNgqw3tq9bGqzWrOOjaOk7UkY4xNrL65rStP_s&signer=media-rpc&x-canva-quality=thumbnail" alt="Style and Color controls">
+          <img src="https://media.canva.com/v2/image-resize/format:PNG/height:138/quality:100/uri:ifs%3A%2F%2FM%2F1c79b383-a3af-47c5-9ed4-f1944ef6ab8a/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAADSeuMcO4XfdlV0d8NzgA8Eb47UstskwCx9hDguqTJGm&exp=1787610610&osig=AAAAAAAAAAAAAAAAAAAAACDHWpJ3cb5pVHFU5jpAexsD9c69yAcdqZbuALAsgMrp&signer=media-rpc&x-canva-quality=thumbnail" alt="Scale Alpha Rotation controls">
+          <img src="https://media.canva.com/v2/image-resize/format:PNG/height:102/quality:100/uri:ifs%3A%2F%2FM%2Fb382e48a-ae63-4dff-a463-7243318b653a/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAGQQjnyV9kCPg-hzOpLS4G1QhW1rcu-wY2nAO_vFaAna&exp=1787610518&osig=AAAAAAAAAAAAAAAAAAAAAFgZRf11pNBKek0cSi4C1u11kEbjLMPw5ZBS0mkIFZ0P&signer=media-rpc&x-canva-quality=thumbnail" alt="Position controls">
+          <img src="https://media.canva.com/v2/image-resize/format:PNG/height:51/quality:100/uri:ifs%3A%2F%2FM%2F500b9a56-9c3e-4b4e-a50c-f971cea95470/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAKU9XlZtb5l-CTZHSschIkMd7b4ekb0d7kdYcBgwMOyH&exp=1787608194&osig=AAAAAAAAAAAAAAAAAAAAAL1yOWJT-bjuq4uEG3u35TOT9dBA8jsnWjNMeXNZ5i74&signer=media-rpc&x-canva-quality=thumbnail" alt="Start Crosshair control">
+        </article>
+        <article class="product-card precision-float">
+          <div class="card-label">PRECISION COLLECTION</div>
+          <img src="https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F8248d1f0-106f-424a-b6d0-28c7c60cc123/watermark:F/width:116?csig=AAAAAAAAAAAAAAAAAAAAAELw6yIT8W7Pq-QMgWSPUmEWHDKAiHw11aDw0wmSrj4U&exp=1787608284&osig=AAAAAAAAAAAAAAAAAAAAAFvqoM-JttSf9uAGpreS4u7iMH0XWofIWgE0lN99MHH8&signer=media-rpc&x-canva-quality=thumbnail" alt="Precision collection preview">
+        </article>
+      </div>
+    </section>
+
+    <section class="feature feature-controls" id="controls">
+      <div class="feature-head">
+        <div><p class="eyebrow">01 — Control Deck</p><h2>Everything you tune.<br><span>One focused deck.</span></h2></div>
+        <p>Style and Color stay visible up top. Scale, Alpha and Rotation use the signature rotary controls, with Position, Focus View and Start Crosshair underneath.</p>
+      </div>
+      <div class="control-showcase">
+        <div class="control-copy"><span>01</span><b>Scale</b><p>0–200%</p><span>02</span><b>Alpha</b><p>0–100%</p><span>03</span><b>Rotation</b><p>0–360°</p><span>04</span><b>Position</b><p>X / Y placement</p></div>
+        <div class="visual-frame visual-dials"><img src="https://media.canva.com/v2/image-resize/format:PNG/height:138/quality:100/uri:ifs%3A%2F%2FM%2F1c79b383-a3af-47c5-9ed4-f1944ef6ab8a/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAADSeuMcO4XfdlV0d8NzgA8Eb47UstskwCx9hDguqTJGm&exp=1787610610&osig=AAAAAAAAAAAAAAAAAAAAACDHWpJ3cb5pVHFU5jpAexsD9c69yAcdqZbuALAsgMrp&signer=media-rpc&x-canva-quality=thumbnail" alt="Crossara rotary controls"></div>
+        <div class="visual-frame visual-position"><img src="https://media.canva.com/v2/image-resize/format:PNG/height:102/quality:100/uri:ifs%3A%2F%2FM%2Fb382e48a-ae63-4dff-a463-7243318b653a/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAAGQQjnyV9kCPg-hzOpLS4G1QhW1rcu-wY2nAO_vFaAna&exp=1787610518&osig=AAAAAAAAAAAAAAAAAAAAAFgZRf11pNBKek0cSi4C1u11kEbjLMPw5ZBS0mkIFZ0P&signer=media-rpc&x-canva-quality=thumbnail" alt="Crossara Position controls"><img class="focus-strip" src="https://media.canva.com/v2/image-resize/format:PNG/height:29/quality:100/uri:ifs%3A%2F%2FM%2Fe4b5ba1d-a8b9-46cb-ad79-9520c0a94ce8/watermark:F/width:200?csig=AAAAAAAAAAAAAAAAAAAAALcKPUivpgKQzidbh_hUlI4pb2PYPCD6Zy-JnZ0qmJYX&exp=1787607393&osig=AAAAAAAAAAAAAAAAAAAAAJ3OXlQQm6Y9NALTddUzOxT2mSk_sLxmRtx7lS2zZ0hy&signer=media-rpc&x-canva-quality=thumbnail" alt="Focus View strip"></div>
+      </div>
+    </section>
+
+    <section class="feature feature-styles" id="styles">
+      <div class="feature-head"><div><p class="eyebrow">02 — Style Browser</p><h2>Three lanes.<br><span>One visual system.</span></h2></div><p>The real library is organized as BASIC, PRO and PRECISION. Each category gets a distinct role instead of being treated as three equal text boxes.</p></div>
+      <div class="style-showcase">
+        <article class="style-major precision-card"><div class="style-copy"><span>PRECISION</span><h3>Signature designs.</h3><p>The expressive visual side of Crossara.</p></div><img src="https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F8248d1f0-106f-424a-b6d0-28c7c60cc123/watermark:F/width:116?csig=AAAAAAAAAAAAAAAAAAAAAELw6yIT8W7Pq-QMgWSPUmEWHDKAiHw11aDw0wmSrj4U&exp=1787608284&osig=AAAAAAAAAAAAAAAAAAAAAFvqoM-JttSf9uAGpreS4u7iMH0XWofIWgE0lN99MHH8&signer=media-rpc&x-canva-quality=thumbnail" alt="Precision collection"></article>
+        <article class="style-minor basic-card"><div class="style-copy"><span>BASIC</span><h3>Clean essentials.</h3><p>Simple everyday reticles.</p></div><img src="https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F7194fd28-b247-414f-9e5d-39e3bde4bdee/watermark:F/width:113?csig=AAAAAAAAAAAAAAAAAAAAABEIEde_cW8AOqa_dN-zp094NJtussaAkHp5628xJi_3&exp=1787609631&osig=AAAAAAAAAAAAAAAAAAAAALxtrZ8EB4FP3ksbrQbt0Ln1SpOKwYqlZNI3UTL-u3Ng&signer=media-rpc&x-canva-quality=thumbnail" alt="Basic reticle library"></article>
+        <article class="style-minor pro-card" id="pro"><div class="style-copy"><span>PRO</span><h3>More control.</h3><p>Advanced designs plus Custom PNG.</p></div><img src="https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F90fc41c7-237e-4c10-9dc3-4cfdad21c7ef/watermark:F/width:154?csig=AAAAAAAAAAAAAAAAAAAAAAGFwCaitBvrexHnUEJeRyaSjqGrB5wegsIfdulQzVZ8&exp=1787610204&osig=AAAAAAAAAAAAAAAAAAAAALJT_BRfPwaMogrEVuu1d4ON65eu5fD4LuuhddE6iJ7w&signer=media-rpc&x-canva-quality=thumbnail" alt="PRO grid with Custom PNG"></article>
+      </div>
+    </section>
+
+    <section class="feature rgb-section" id="rgb">
+      <div class="rgb-copy"><p class="eyebrow">03 — Color &amp; RGB Glow</p><h2>Static when you want it.<br><span>Motion when you don’t.</span></h2><p>Preset colors keep things simple. RGB Glow in PRO adds movement with NORMAL, CHASE, PULSE and ORBIT modes plus speed control.</p><div class="mode-pills"><span>NORMAL</span><span>CHASE</span><span>PULSE</span><span>ORBIT</span></div></div>
+      <div class="rgb-visual"><img src="https://media.canva.com/v2/image-resize/format:PNG/height:199/quality:100/uri:ifs%3A%2F%2FM%2F57cddb85-425f-43f6-81e3-536ade52348e/watermark:F/width:149?csig=AAAAAAAAAAAAAAAAAAAAAHq_zXezUrKzc2Mz1NWhLeIjfdc9OVaEdKdJe59wnPUJ&exp=1787608554&osig=AAAAAAAAAAAAAAAAAAAAALx8zNGj1HbDeQGlsOGZvQn4l2y41MbckDEmyxGyxM7q&signer=media-rpc&x-canva-quality=thumbnail" alt="Crossara preset colors and RGB Glow controls"></div>
+    </section>
+
+    <section class="launch" id="launch">
+      <div class="launch-mark"><img src="assets/crossara-a-mark.svg" alt="Crossara app mark"></div>
+      <div class="launch-copy"><img class="launch-wordmark" src="assets/crossara-navbar-wordmark.svg" alt="Crossara"><p class="eyebrow">Precision. Focus. Control.</p><h2>Built around<br><span>your aim.</span></h2><p>Crossara is preparing for release on Android.</p><div class="store-pill large"><span class="play-mark" aria-hidden="true"></span><span><small>Coming soon on</small>Google Play</span></div></div>
+    </section>
   </main>
-  <footer class="site-footer"><img src="assets/crossara-navbar-wordmark.svg" alt="Crossara" width="154" height="23"><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div><p>© 2026 Crossara. All rights reserved.</p></footer>
-</body></html>
+
+  <footer class="site-footer"><img src="assets/crossara-navbar-wordmark.svg" alt="Crossara"><div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="support.html">Support</a></div><p>© 2026 Crossara. All rights reserved.</p></footer>
+</body>
+</html>
