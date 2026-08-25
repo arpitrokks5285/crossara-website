@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CROSSARA Labs Playground</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/playground.css">
+</head>
+<body class="playground-page">
+  <main class="playground-shell">
+    <a class="playground-back" href="index.html" aria-label="Back to CROSSARA">← Back to CROSSARA</a>
+    <header class="playground-header">
+      <p class="playground-eyebrow">CROSSARA LABS</p>
+      <h1>Playground</h1>
+      <p>Move the crosshair, line up the target, and fire.</p>
+    </header>
+
+    <section class="playground-stage" aria-label="Interactive crosshair playground">
+      <div class="playground-hud">
+        <span>SCORE <strong id="playgroundScore">0</strong></span>
+        <button id="playgroundReset" type="button">RESET</button>
+      </div>
+
+      <div class="playground-arena" id="playgroundArena">
+        <button class="playground-target" id="playgroundTarget" type="button" aria-label="Target"></button>
+        <div class="playground-crosshair" id="playgroundCrosshair" aria-hidden="true">
+          <span class="crosshair-ring"></span>
+          <span class="crosshair-line crosshair-line-x"></span>
+          <span class="crosshair-line crosshair-line-y"></span>
+          <span class="crosshair-dot"></span>
+        </div>
+      </div>
+
+      <div class="playground-controls">
+        <div class="playground-stick" id="playgroundStick" aria-label="Virtual joystick">
+          <div class="playground-stick-knob" id="playgroundStickKnob"></div>
+        </div>
+        <button class="playground-fire" id="playgroundFire" type="button">FIRE</button>
+      </div>
+
+      <p class="playground-hint">Mobile: drag the joystick. Desktop: use WASD or arrow keys. Press Space or FIRE to shoot.</p>
+    </section>
+  </main>
+
+  <script src="assets/playground.js"></script>
+</body>
+</html>
