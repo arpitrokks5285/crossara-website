@@ -1,158 +1,21 @@
 (() => {
-  const arena = document.getElementById('playgroundArena');
-  const crosshair = document.getElementById('playgroundCrosshair');
-  const target = document.getElementById('playgroundTarget');
-  const scoreEl = document.getElementById('playgroundScore');
-  const resetBtn = document.getElementById('playgroundReset');
-  const stick = document.getElementById('playgroundStick');
-  const knob = document.getElementById('playgroundStickKnob');
-  const fireBtn = document.getElementById('playgroundFire');
-
-  if (!arena || !crosshair || !target) return;
-
-  let x = 0.5;
-  let y = 0.5;
-  let score = 0;
-  let stickPointer = null;
-  let moveX = 0;
-  let moveY = 0;
-  let animationFrame = 0;
-  const keys = new Set();
-
-  const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
-
-  function placeCrosshair() {
-    const rect = arena.getBoundingClientRect();
-    const padX = Math.min(38, rect.width * 0.08);
-    const padY = Math.min(38, rect.height * 0.08);
-    const px = padX + x * Math.max(1, rect.width - padX * 2);
-    const py = padY + y * Math.max(1, rect.height - padY * 2);
-    crosshair.style.left = `${px}px`;
-    crosshair.style.top = `${py}px`;
-  }
-
-  function placeTarget() {
-    const rect = arena.getBoundingClientRect();
-    const margin = 46;
-    const tx = margin + Math.random() * Math.max(1, rect.width - margin * 2);
-    const ty = margin + Math.random() * Math.max(1, rect.height - margin * 2);
-    target.style.left = `${tx}px`;
-    target.style.top = `${ty}px`;
-  }
-
-  function setScore(next) {
-    score = next;
-    scoreEl.textContent = String(score);
-  }
-
-  function fire() {
-    const a = arena.getBoundingClientRect();
-    const c = crosshair.getBoundingClientRect();
-    const t = target.getBoundingClientRect();
-    const cx = c.left + c.width / 2 - a.left;
-    const cy = c.top + c.height / 2 - a.top;
-    const tx = t.left + t.width / 2 - a.left;
-    const ty = t.top + t.height / 2 - a.top;
-    const hitRadius = Math.max(t.width, t.height) * 0.58;
-    const hit = Math.hypot(cx - tx, cy - ty) <= hitRadius;
-
-    if (hit) {
-      setScore(score + 10);
-      target.classList.remove('playground-hit');
-      void target.offsetWidth;
-      target.classList.add('playground-hit');
-      window.setTimeout(placeTarget, 110);
-    }
-  }
-
-  function reset() {
-    x = 0.5;
-    y = 0.5;
-    setScore(0);
-    moveX = 0;
-    moveY = 0;
-    knob.style.transform = 'translate(-50%,-50%)';
-    placeCrosshair();
-    placeTarget();
-  }
-
-  function updateJoystick(clientX, clientY) {
-    const r = stick.getBoundingClientRect();
-    const cx = r.left + r.width / 2;
-    const cy = r.top + r.height / 2;
-    const max = r.width * 0.31;
-    let dx = clientX - cx;
-    let dy = clientY - cy;
-    const distance = Math.hypot(dx, dy);
-    if (distance > max) {
-      dx = (dx / distance) * max;
-      dy = (dy / distance) * max;
-    }
-    moveX = dx / max;
-    moveY = dy / max;
-    knob.style.transform = `translate(calc(-50% + ${dx}px),calc(-50% + ${dy}px))`;
-  }
-
-  function releaseJoystick() {
-    stickPointer = null;
-    moveX = 0;
-    moveY = 0;
-    knob.style.transform = 'translate(-50%,-50%)';
-  }
-
-  stick.addEventListener('pointerdown', (e) => {
-    stickPointer = e.pointerId;
-    stick.setPointerCapture(e.pointerId);
-    updateJoystick(e.clientX, e.clientY);
-  });
-  stick.addEventListener('pointermove', (e) => {
-    if (e.pointerId === stickPointer) updateJoystick(e.clientX, e.clientY);
-  });
-  stick.addEventListener('pointerup', releaseJoystick);
-  stick.addEventListener('pointercancel', releaseJoystick);
-
-  window.addEventListener('keydown', (e) => {
-    const k = e.key.toLowerCase();
-    if (['arrowup','arrowdown','arrowleft','arrowright','w','a','s','d',' ','enter'].includes(k)) e.preventDefault();
-    if (k === ' ' || k === 'enter') {
-      if (!e.repeat) fire();
-      return;
-    }
-    keys.add(k);
-  }, { passive: false });
-  window.addEventListener('keyup', (e) => keys.delete(e.key.toLowerCase()));
-
-  arena.addEventListener('click', (e) => {
-    if (e.pointerType === 'touch') return;
-    fire();
-  });
-  fireBtn.addEventListener('click', fire);
-  resetBtn.addEventListener('click', reset);
-  window.addEventListener('resize', () => {
-    placeCrosshair();
-    placeTarget();
-  });
-
-  function tick() {
-    let kx = 0;
-    let ky = 0;
-    if (keys.has('arrowleft') || keys.has('a')) kx -= 1;
-    if (keys.has('arrowright') || keys.has('d')) kx += 1;
-    if (keys.has('arrowup') || keys.has('w')) ky -= 1;
-    if (keys.has('arrowdown') || keys.has('s')) ky += 1;
-    const dx = clamp(moveX + kx, -1, 1);
-    const dy = clamp(moveY + ky, -1, 1);
-    if (dx || dy) {
-      const rect = arena.getBoundingClientRect();
-      const speed = 4.2;
-      x = clamp(x + (dx * speed) / Math.max(1, rect.width), 0, 1);
-      y = clamp(y + (dy * speed) / Math.max(1, rect.height), 0, 1);
-      placeCrosshair();
-    }
-    animationFrame = requestAnimationFrame(tick);
-  }
-
-  reset();
-  animationFrame = requestAnimationFrame(tick);
-  window.addEventListener('pagehide', () => cancelAnimationFrame(animationFrame), { once: true });
+  const arena=document.getElementById('playgroundArena'),crosshair=document.getElementById('playgroundCrosshair'),seed=document.getElementById('playgroundTarget'),scoreEl=document.getElementById('playgroundScore'),resetBtn=document.getElementById('playgroundReset'),stick=document.getElementById('playgroundStick'),knob=document.getElementById('playgroundStickKnob'),fireBtn=document.getElementById('playgroundFire');
+  if(!arena||!crosshair||!seed)return;
+  const designs=['basic-alpha-dot.png','basic-bracket.png','basic-delta-base.png','basic-edge-cross.png','basic-plus-dot.png','basic-reflex-ring.png','pro-aero-chevron.png','pro-arrowhead.png','precision-arcus.png','precision-astra.png','precision-hexa.png','precision-pulse.png','precision-spectra.png'].map(n=>'assets/catalog/'+n);
+  let x=.5,y=.5,score=0,stickPointer=null,moveX=0,moveY=0,raf=0,last=performance.now(),designCursor=Math.floor(Math.random()*designs.length);const keys=new Set(),targets=[];const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+  function placeCrosshair(){const r=arena.getBoundingClientRect(),px=Math.min(38,r.width*.08),py=Math.min(38,r.height*.08);crosshair.style.left=`${px+x*Math.max(1,r.width-px*2)}px`;crosshair.style.top=`${py+y*Math.max(1,r.height-py*2)}px`;}
+  function nextDesign(){designCursor=(designCursor+1+Math.floor(Math.random()*(designs.length-1)))%designs.length;return designs[designCursor];}
+  function randomSpot(){const r=arena.getBoundingClientRect(),m=Math.min(64,r.width*.14);return{x:m+Math.random()*Math.max(1,r.width-m*2),y:m+Math.random()*Math.max(1,r.height-m*2)};}
+  function refresh(t){const p=randomSpot(),a=Math.random()*Math.PI*2,s=7+Math.random()*8;t.x=p.x;t.y=p.y;t.vx=Math.cos(a)*s;t.vy=Math.sin(a)*s;t.img.src=nextDesign();t.el.style.left=`${t.x}px`;t.el.style.top=`${t.y}px`;}
+  function makeTarget(el){el.className='playground-target playground-design-target';el.removeAttribute('id');el.innerHTML='';const img=document.createElement('img');img.alt='';img.draggable=false;el.appendChild(img);const t={el,img,x:0,y:0,vx:0,vy:0};targets.push(t);refresh(t);return t;}
+  makeTarget(seed);while(targets.length<3){const el=document.createElement('button');el.type='button';el.setAttribute('aria-label','Crosshair target');arena.insertBefore(el,crosshair);makeTarget(el);}
+  function setScore(v){score=v;scoreEl.textContent=String(v);}
+  function fire(){const a=arena.getBoundingClientRect(),c=crosshair.getBoundingClientRect(),cx=c.left+c.width/2-a.left,cy=c.top+c.height/2-a.top;let hit=null,dist=Infinity;for(const t of targets){const r=t.el.getBoundingClientRect(),tx=r.left+r.width/2-a.left,ty=r.top+r.height/2-a.top,d=Math.hypot(cx-tx,cy-ty);if(d<=Math.max(r.width,r.height)*.48&&d<dist){hit=t;dist=d;}}if(hit){setScore(score+10);hit.el.classList.remove('playground-hit');void hit.el.offsetWidth;hit.el.classList.add('playground-hit');setTimeout(()=>refresh(hit),90);}}
+  function reset(){x=.5;y=.5;setScore(0);moveX=moveY=0;knob.style.transform='translate(-50%,-50%)';placeCrosshair();targets.forEach(refresh);}
+  function updateJoystick(cx,cy){const r=stick.getBoundingClientRect(),mx=r.left+r.width/2,my=r.top+r.height/2,max=r.width*.31;let dx=cx-mx,dy=cy-my,d=Math.hypot(dx,dy);if(d>max){dx=dx/d*max;dy=dy/d*max;}moveX=dx/max;moveY=dy/max;knob.style.transform=`translate(calc(-50% + ${dx}px),calc(-50% + ${dy}px))`;}
+  function releaseJoystick(){stickPointer=null;moveX=moveY=0;knob.style.transform='translate(-50%,-50%)';}
+  stick.addEventListener('pointerdown',e=>{stickPointer=e.pointerId;stick.setPointerCapture(e.pointerId);updateJoystick(e.clientX,e.clientY)});stick.addEventListener('pointermove',e=>{if(e.pointerId===stickPointer)updateJoystick(e.clientX,e.clientY)});stick.addEventListener('pointerup',releaseJoystick);stick.addEventListener('pointercancel',releaseJoystick);
+  window.addEventListener('keydown',e=>{const k=e.key.toLowerCase();if(['arrowup','arrowdown','arrowleft','arrowright','w','a','s','d',' ','enter'].includes(k))e.preventDefault();if(k===' '||k==='enter'){if(!e.repeat)fire();return;}keys.add(k)},{passive:false});window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));arena.addEventListener('click',e=>{if(e.pointerType!=='touch')fire()});fireBtn.addEventListener('click',fire);resetBtn.addEventListener('click',reset);window.addEventListener('resize',()=>{placeCrosshair();targets.forEach(refresh)});
+  function tick(now){const dt=Math.min(.04,(now-last)/1000||0);last=now;let kx=0,ky=0;if(keys.has('arrowleft')||keys.has('a'))kx--;if(keys.has('arrowright')||keys.has('d'))kx++;if(keys.has('arrowup')||keys.has('w'))ky--;if(keys.has('arrowdown')||keys.has('s'))ky++;const dx=clamp(moveX+kx,-1,1),dy=clamp(moveY+ky,-1,1);if(dx||dy){const r=arena.getBoundingClientRect(),speed=250;x=clamp(x+dx*speed*dt/Math.max(1,r.width),0,1);y=clamp(y+dy*speed*dt/Math.max(1,r.height),0,1);placeCrosshair();}const ar=arena.getBoundingClientRect(),m=45;for(const t of targets){t.x+=t.vx*dt;t.y+=t.vy*dt;if(t.x<m||t.x>ar.width-m){t.vx*=-1;t.x=clamp(t.x,m,ar.width-m)}if(t.y<m||t.y>ar.height-m){t.vy*=-1;t.y=clamp(t.y,m,ar.height-m)}t.el.style.left=`${t.x}px`;t.el.style.top=`${t.y}px`;}raf=requestAnimationFrame(tick)}
+  reset();raf=requestAnimationFrame(tick);window.addEventListener('pagehide',()=>cancelAnimationFrame(raf),{once:true});
 })();
