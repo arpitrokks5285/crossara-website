@@ -1,0 +1,1 @@
+CROSSARA Labs Playground implementation branch. This branch adds a standalone playground page and related assets without changing the existing main page yet. The main-page entry button should be added only after inspecting current index.html to avoid disturbing existing layout.
