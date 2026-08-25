@@ -113,11 +113,19 @@
 
   window.addEventListener('keydown', (e) => {
     const k = e.key.toLowerCase();
-    if (['arrowup','arrowdown','arrowleft','arrowright','w','a','s','d',' '].includes(k)) e.preventDefault();
-    if (k === ' ') fire(); else keys.add(k);
+    if (['arrowup','arrowdown','arrowleft','arrowright','w','a','s','d',' ','enter'].includes(k)) e.preventDefault();
+    if (k === ' ' || k === 'enter') {
+      if (!e.repeat) fire();
+      return;
+    }
+    keys.add(k);
   }, { passive: false });
   window.addEventListener('keyup', (e) => keys.delete(e.key.toLowerCase()));
 
+  arena.addEventListener('click', (e) => {
+    if (e.pointerType === 'touch') return;
+    fire();
+  });
   fireBtn.addEventListener('click', fire);
   resetBtn.addEventListener('click', reset);
   window.addEventListener('resize', () => {
