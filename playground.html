@@ -22,7 +22,7 @@
         <button id="playgroundReset" type="button">RESET</button>
       </div>
 
-      <div class="playground-arena" id="playgroundArena">
+      <div class="playground-arena" id="playgroundArena" aria-label="Aim arena. On desktop, left click to fire.">
         <button class="playground-target" id="playgroundTarget" type="button" aria-label="Target"></button>
         <div class="playground-crosshair playground-logo-aim" id="playgroundCrosshair" aria-hidden="true">
           <img src="assets/crossara-app-icon-512.png" alt="">
@@ -36,7 +36,36 @@
         <button class="playground-fire" id="playgroundFire" type="button">FIRE</button>
       </div>
 
-      <p class="playground-hint">Mobile: drag the joystick. Desktop: use WASD or arrow keys. Press Space or FIRE to shoot.</p>
+      <section class="playground-control-guide" aria-label="Playground controls">
+        <div class="playground-guide-card">
+          <span class="playground-guide-label">MOBILE</span>
+          <strong>Touch controls</strong>
+          <div class="playground-guide-row">
+            <span class="control-chip">JOYSTICK</span>
+            <span>Move</span>
+          </div>
+          <div class="playground-guide-row">
+            <span class="control-chip">FIRE</span>
+            <span>Shoot</span>
+          </div>
+        </div>
+
+        <div class="playground-guide-card">
+          <span class="playground-guide-label">DESKTOP</span>
+          <strong>Keyboard + mouse</strong>
+          <div class="playground-key-map" aria-label="Movement keys">
+            <span class="keycap">W</span><span class="keycap">A</span><span class="keycap">S</span><span class="keycap">D</span>
+            <span class="guide-or">or</span>
+            <span class="keycap">↑</span><span class="keycap">←</span><span class="keycap">↓</span><span class="keycap">→</span>
+          </div>
+          <div class="playground-guide-row playground-guide-shoot">
+            <span class="control-chip">LEFT CLICK</span>
+            <span class="control-chip">SPACE</span>
+            <span class="control-chip">ENTER</span>
+            <span>Shoot</span>
+          </div>
+        </div>
+      </section>
     </section>
   </main>
 
